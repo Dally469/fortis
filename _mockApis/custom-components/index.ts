@@ -6,6 +6,7 @@ import type {
   BlogSection,
   TeamSection,
   Testimonials,
+  Connect,
 } from "@/types/custom-components";
 
 /*import tabler icons*/
@@ -39,6 +40,41 @@ const ServicesData: Services[] = [
   },
 ];
 
+const ConnectData: Connect[] = [
+  {
+    icon: StarIcon,
+    title: "Partner with us",
+    desc: "Become more than a partner; become a catalyst for change. Together, we can mold a future where access to justice is not a privilege, but a universal right.",
+    photo: "/images/partners.jpg",
+    url: "/connect/partners",
+    btnName: "Become a  Partner"
+  },
+  {
+    icon: StarIcon,
+    title: "Contact us",
+    desc: "Whether you have inquiries, suggestions, or simply want to learn more about our initiatives, we're eager to connect with you.",
+    photo: "/images/contact.png",
+    url: "/connect/contact",
+    btnName: "Our Contacts"
+  },
+  {
+    icon: StarIcon,
+    title: "Carrers of Fortis",
+    desc: "Join a team that champions innovation, justice, and equity within Africa's evolving legal ecosystem.",
+    photo: "/images/carrers.jpg",
+    url: "/connect/carrers",
+    btnName: "Open Role"
+  },
+  {
+    icon: StarIcon,
+    title: "Book Consultation",
+    desc: "We welcome and value contributions from scholars, professionals, and passionate individuals who seek to shed light on challenges in Africa.",
+    photo: "/images/consultation.jpg",
+    url: "/connect/consultation",
+    btnName: "consultation"
+  },
+ 
+];
 //Build Features
 import imgg1 from "/images/gifs/corporate.gif";
 import imgg2 from "/images/gifs/fa-images-1.gif";
@@ -279,9 +315,7 @@ const TestimonialsData: Testimonials[] = [
 export {
   ServicesData,
   BuildFeaturesData,
-  pricing,
-  Portfolio,
-  Blog,
+  ConnectData,
   Team,
   TestimonialsData,
 };

@@ -1,0 +1,114 @@
+<script setup lang="ts">
+import Header from "@/layouts/header/Header.vue";
+import PageHeroBanner from "@/components/custom-components/PageHeroBanner.vue";
+import Services from "@/components/custom-components/Services.vue";
+import BuildAmazing from "@/components/custom-components/BuildAmazing.vue";
+import BuildFeature from "@/components/custom-components/BuildFeature.vue";
+import ChoosePricePlan from "@/components/custom-components/ChooseYourPlan.vue";
+import Portfolio from "@/components/custom-components/Portfolio.vue";
+import Blog from "@/components/custom-components/BlogSection.vue";
+import Team from "@/components/custom-components/Team.vue";
+import Testimonials from "@/components/custom-components/Testimonials.vue";
+import Contact from "@/components/custom-components/Contact.vue";
+import UpgradetoPro from "@/components/custom-components/UpgradetoPro.vue";
+import Footer from "@/layouts/footer/Footer.vue";
+</script>
+<template>
+  <!--Header-->
+  <Header />
+  <PageHeroBanner
+    title="Careers at Certa"
+    subtitle="Join a team that champions innovation, justice, and equity within Africa's evolving legal ecosystem."
+  />
+
+  <div class="py-md-15 bg-white py-8">
+    <v-container>
+      <v-row class="justify-start">
+        <v-col cols="12" sm="8">
+       
+        </v-col>
+      </v-row>
+      <!-- -----------------------------------------------
+            Start Contact Form
+        ----------------------------------------------- -->
+        <v-row justify="center">
+        
+        <v-col cols="12" md="6">
+          <div class="my-md-11">
+            <form>
+              <v-row class="mt-1">
+                <v-col cols="12" md="12" class="py-0">
+                  <v-text-field
+                    label="Name"
+                    variant="outlined"
+                    color="primary"
+                    placeholder="Name"
+                  ></v-text-field>
+                </v-col>
+
+                <v-col cols="12" md="12" class="py-0">
+                  <v-text-field
+                    label="Phone"
+                    variant="outlined"
+                    color="primary"
+                    placeholder="Phone"
+                  ></v-text-field>
+                </v-col>
+                <v-col cols="12" md="12" class="py-0">
+                  <v-text-field
+                    label="Email"
+                    variant="outlined"
+                    type="email"
+                    color="primary"
+                    placeholder="Email"
+                  ></v-text-field>
+                </v-col>
+                <v-col cols="12" class="py-0">
+                  <v-textarea
+                    name="message"
+                    color="primary"
+                    variant="outlined"
+                    label="Message"
+                    rows="3"
+                  ></v-textarea>
+                </v-col>
+              
+              </v-row>
+              <v-btn
+                to="/"
+                class="mt-7 px-8 py-2"
+                flat
+                size="large"
+                color="primary"
+              >
+                Submit 
+              </v-btn>
+            </form>
+          </div>
+        </v-col>
+        <v-col cols="12" md="2">
+         <v-date-picker
+        color="primary"
+      ></v-date-picker>
+        </v-col>
+        <v-col cols="12" md="4">
+          <img
+            src="/images/carrers.jpg"
+            alt="shape"
+            class="rounded-lg object-cover"
+            height=400
+            width=400
+          />
+        </v-col>
+      </v-row>
+      <!-- -----------------------------------------------
+            End Contact Form
+        ----------------------------------------------- -->
+    </v-container>
+  </div>
+
+  <!-- <Testimonials /> -->
+
+  <UpgradetoPro />
+  <Footer />
+</template>

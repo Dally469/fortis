@@ -6,6 +6,14 @@ type Services = {
     desc:string;
 };
 
+type Connect = {
+    icon: TablerIconComponent;
+    title: string;
+    desc:string;
+    photo:string;
+    url:string;
+    btnName:string;
+};
 //Build Features
 type BuildFeatures = {
   img: string;
@@ -91,4 +99,4 @@ type Testimonials = {
 
 
 
-export type {Services,BuildFeatures,pricingType,PortfolioSection,BlogSection,TeamSection,Testimonials}
+export type {Services,BuildFeatures,pricingType,PortfolioSection,BlogSection,TeamSection,Testimonials,Connect}

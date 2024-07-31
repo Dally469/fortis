@@ -12,14 +12,14 @@ const sidebarItem: menu[] = [
         to: '/'
     },
     {
-        title: 'Our Firm',
+        title: ' Law Firm',
         to: '/our-firm'
     },
     {
-        title: 'Our Practice Area',
+        title: 'Practice Area',
         to: '/practice-area'
     },{
-        title: 'Our Lawyer',
+        title: '  Team',
         to: '/lawyers'
     },{
         title: 'Contact Us',

@@ -26,7 +26,7 @@
             }
 
             .v-list-item-title {
-                font-weight: 400;
+                font-weight: 500;
                 font-size: 1rem;
                 color: rgba(var(--v-theme-light));
             }
@@ -57,6 +57,7 @@
                 color: rgb(var(--v-theme-primary));
                 border-bottom: 3px solid rgb(var(--v-theme-primary));
                 border-bottom-left-radius: 6px;
+                // font-weight: bold;
                 border-bottom-right-radius: 6px;
                 .v-list-item-title {
                     color: rgb(var(--v-theme-primary));
@@ -84,6 +85,7 @@
                 .v-list-group__items .v-list-item.v-list-item--active,
                 .v-list-group__items .v-list-item.v-list-item--active>.v-list-item__overlay {
                     background: transparent;
+                    font-weight: bold;
                     color: rgb(var(--v-theme-primary));
                 }
             }
@@ -110,7 +112,7 @@
             background: transparent !important;
 
             &.sticky {
-                background: rgb(var(--v-theme-background)) !important;
+                background: rgb(var(--v-theme-black)) !important;
             }
         }
     }
@@ -138,6 +140,9 @@
 //Active link
 .dropdown_menu {
     .v-list-item {
+        &:hover {
+            color: rgba(var(--v-theme-primary)) !important;
+        }
         .v-list-item-title {
             font-weight: 500;
             font-size: 1rem;

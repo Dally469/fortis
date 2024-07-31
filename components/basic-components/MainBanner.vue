@@ -1,5 +1,5 @@
 <template>
-    <div class="banner-wrapper bg-lightprimary d-flex align-center" style="min-height: 100svh">
+    <div class="banner-wrapper bg-lightprimary d-flex align-center" style="min-height: 60svh">
       <v-container>
             <v-row class="align-center justify-space-between pt-md-7">
                 <v-col cols="12" md="5" data-aos="fade-right" data-aos-delay="200" data-aos-duration="1000">

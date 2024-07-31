@@ -8,12 +8,18 @@ type Services = {
 
 //Build Features
 type BuildFeatures = {
-    icon: TablerIconComponent;
-    title: string;
-    desc:string;
-    link:string;
+  img: string;
+  title: string;
+  desc: string;
+  flex: number;
+  lawyer?: Lawyer[] ;
 };
 
+type Lawyer = {
+  name: string;
+  phone: string;
+  email?: string;  
+};
 
 //Choose Your Plans
 type listPriceType={

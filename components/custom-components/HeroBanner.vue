@@ -1,27 +1,147 @@
 <template>
-    <div class="banner-wrapper bg-black d-flex align-center" style="min-height: 100svh">
-      <v-container>
-            <v-row class="align-center justify-space-between pt-md-7">
-                <v-col cols="12" md="5" data-aos="fade-right" data-aos-delay="200" data-aos-duration="1000">
-                    <div class="d-flex align-center mb-6">
-                        <span class="bg-primary pa-2 rounded-circle mr-2"></span>
-                        <h6 class="text-subtitle-1 text-lightmuted font-weight-bold">build everything</h6>
-                    </div>
-                    <h1 class="text-h1 text-lightmuted mb-6" >Amazingly fexible, customizable and easy to use</h1>
-                    <p class="text-body-1 text-muted mb-8">Build high quality landing pages using Landingpro now.</p>
-                    <v-btn variant="flat" color="primary" size="large" class="px-9">get started</v-btn>
-                </v-col>
-                <v-col cols="12" md="5" class="mt-md-0 mt-3">
-                    <div class="position-relative text-center text-lg-start">
-                        <img src="/images/shape/shapeline-2.png" alt="shape" class="img-fluid position-absolute top-0 right-0 mt-n10 mr-n16" />
-                        <div class="position-relative z-index1 rounded-md overflow-hidden">
-                            <img src="/images/corporate/corporate-banner.jpg" alt="banner" class="img-fluid rounded-md"/>
-                        </div>
-                        <img src="/images/shape/circle-line-3.png" alt="shape" class="img-fluid position-absolute bottom-0 left-0 mb-n10 ml-n12 " />
-                    </div>
-                </v-col>
-            </v-row>
-        </v-container>
-    </div>
-  </template>
-  
+  <div class="banner-wrapper align-center" style="min-height: 100svh">
+    <v-container>
+      <v-row
+        style="width: 70%"
+        class="align-center relative z-10 justify-space-between pt-md-7 content-word"
+      >
+        <v-col
+          cols="12"
+          md="12"
+          data-aos="fade-right"
+          data-aos-delay="200"
+          data-aos-duration="1000"
+        >
+          <div class="d-flex align-center text-white mb-6">
+            <div class="text-h4 text-white font-weight-bold">
+              Area Of Practice That Can Help You To Win.
+            </div>
+          </div>
+          <div class="text-lightmuted mb-6">
+            <div class="container">
+              <p class="d-flex">
+                I <span ref="typedTextSpan" class="typed-text"></span
+                ><span ref="cursorSpan" class="cursor">&nbsp;</span>
+              </p>
+            </div>
+          </div>
+        </v-col>
+        <v-row v-if="false">
+          <v-col cols="12" md="6" sm="6" class="px-xs-0">
+            <div
+              class="mt-md-6 col-span-1 text-h5 pr-md-2 py-md-2 rounded-lg text-secondary w-1/2"
+            >
+              Our mission is to provide access to quality and equitable justice
+              to vulnerable groups and build the knowledge and capacity of
+              justice actors.
+            </div>
+          </v-col>
+        </v-row>
+      </v-row>
+    </v-container>
+  </div>
+</template>
+<script setup lang="ts">
+defineProps({
+  title: String,
+  subtitle: String,
+  image: String,
+  buttonText: String,
+});
+
+const textArray = ref([
+  "Corporate and Compliance Governance",
+  "Business & Corporate Law",
+  "Intellectual Property Law",
+  "Family Law",
+  "Real Estate Law",
+  "Labor Law",
+  "Procurement Law",
+  "Tax Law",
+  "Criminal Justice Law",
+]);
+const typingDelay = ref(200);
+const erasingDelay = ref(100);
+const newTextDelay = ref(2000); // Delay between current and next text
+let textArrayIndex = ref(0);
+let charIndex = ref(0);
+const typedTextSpan = ref(0);
+const cursorSpan = ref(0);
+function type() {
+  if (charIndex.value < textArray.value[textArrayIndex.value].length) {
+    if (!cursorSpan.value.classList.contains("typing"))
+      cursorSpan.value.classList.add("typing");
+    typedTextSpan.value.textContent += textArray.value[
+      textArrayIndex.value
+    ].charAt(charIndex.value);
+    charIndex.value++;
+    setTimeout(() => type(), typingDelay.value);
+  } else {
+    cursorSpan.value.classList.remove("typing");
+    setTimeout(() => erase(), newTextDelay.value);
+  }
+}
+
+function erase() {
+  if (charIndex.value > 0) {
+    if (!cursorSpan.value.classList.contains("typing"))
+      cursorSpan.value.classList.add("typing");
+    typedTextSpan.value.textContent = textArray.value[
+      textArrayIndex.value
+    ].substring(0, charIndex.value - 1);
+    charIndex.value--;
+    setTimeout(() => erase(), erasingDelay.value);
+  } else {
+    cursorSpan.value.classList.remove("typing");
+    textArrayIndex.value++;
+    if (textArrayIndex.value >= textArray.value.length)
+      textArrayIndex.value = 0;
+    setTimeout(() => type(), typingDelay.value + 1100);
+  }
+}
+onMounted(() => setTimeout(() => type(), 1000));
+</script>
+<style lang="css">
+p {
+  overflow: hidden;
+}
+.container p span.typed-text {
+  font-weight: bold;
+  color: white;
+  font-size: 5rem;
+  text-shadow: 1px 1px 1px rgb(110, 14, 14);
+}
+.container p span.cursor {
+  display: inline-block;
+  background-color: #ccc;
+  margin-left: 0.7rem;
+  width: 5px;
+  border-radius: 10px;
+  animation: blink 1s infinite;
+}
+.container p {
+  font-size: 5rem;
+  font-weight: bold;
+  color: transparent;
+}
+.container p span.cursor.typing {
+  animation: none;
+}
+@keyframes blink {
+  0% {
+    background-color: #ccc;
+  }
+  49% {
+    background-color: #ccc;
+  }
+  50% {
+    background-color: transparent;
+  }
+  99% {
+    background-color: transparent;
+  }
+  100% {
+    background-color: #ccc;
+  }
+}
+</style>

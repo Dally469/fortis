@@ -62,7 +62,7 @@ function handleScroll() {
                 </template>
             </v-list>
           <div class="d-md-flex d-none">
-            <v-btn color="primary" class="ms-3 sticky-border d-md-flex d-none" size="large" variant="flat">Request Appointment</v-btn>
+            <v-btn color="primary" class="ms-3 sticky-border d-md-flex d-none" size="large" variant="flat">  Connect with Us</v-btn>
           </div>
           <Menu2Icon class="d-md-none d-flex drawer-icon  no-effect ml-auto mr-0" @click.stop="drawer = !drawer"
             size="30"></Menu2Icon>

@@ -48,7 +48,7 @@
   .social-overlay {
     position: relative;
     .img-overlay {
-      background: rgba(26, 139, 243, 0.87);
+      background: rgba(87, 6, 6, 0.322);
       display: none;
       position: absolute;
       top: 0;
@@ -98,7 +98,7 @@
     margin: 0 5px;
     transition: 0.2s ease-in;
     color: rgb(var(--v-theme-primary));
-    background: rgb(var(--v-theme-light));
+    // background: rgb(var(--v-theme-light));
     &:hover {
       transform: translate3d(0px, -5px, 0px);
       background: rgb(var(--v-theme-primary));

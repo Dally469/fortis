@@ -3,7 +3,7 @@
 <template>
     <div class="logo">
       <NuxtLink to="/" >
-        <img src="/images/forlogo.png"   />
+        <img src="/images/logo.png" height="45"   />
       </NuxtLink>
     </div>
   </template>

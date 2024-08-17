@@ -19,18 +19,19 @@
         <!-- -----------------------------------------------
           Second Column
         ----------------------------------------------- -->
-        <v-col cols="12" md="3" sm="6" class="px-xs-0">
-          <h4 class="font-weight-medium mb-5 text-h4 text-white">Phone</h4>
-          <p class="mt-5 text-white">Reception : +250 788 956 848</p>
-          <p class="text-white">Office : +250 788 360 994</p>
+        <v-col cols="12" md="2" sm="6" class="px-xs-0">
+          
+        
         </v-col>
         <!-- -----------------------------------------------
           Third Column
         ----------------------------------------------- -->
-        <v-col cols="12" md="3" sm="6" class="px-xs-0">
-          <h4 class="font-weight-medium mb-5 text-h4 text-white">Email</h4>
+        <v-col cols="12" md="4" sm="6" class="px-xs-0">
+          <h4 class="font-weight-medium mb-5 text-h4 text-white">Contact Info</h4>
+            <p class="mt-5 text-white">Reception : +250 788 956 848</p>
+          <p class="text-white">Office : +250 788 360 994</p>
           <p class="mt-5 text-white">
-            Office :
+            Email address :
             <NuxtLink
               class="text-white text-decoration-none"
               to="mailto:info@fortisasociates.rw"
@@ -39,11 +40,11 @@
             </NuxtLink>
           </p>
           <p>
-            <span class="text-white">Site : </span>
+            <span class="text-white">Webiste : </span>
             <NuxtLink
               class="text-white text-decoration-none"
               href="https://fortisasociates.rw/"
-              >fortisasociates.rw
+              >https://www.fortisasociates.rw
             </NuxtLink>
           </p>
         </v-col>
@@ -122,7 +123,7 @@
             <NuxtLink
               to="https://www.fortisasociates.rw"
               class="text-white text-decoration-none"
-              >fortisasociates.rw</NuxtLink
+              >Fortis Associates</NuxtLink
             >
           </p>
           <div class="ml-auto">

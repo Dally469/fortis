@@ -31,7 +31,7 @@ function viewMore(item: any) {
           </div>
         </v-col>
       </v-row>
-      <v-row class="justify-center">
+      <v-row v-if="false" class="justify-center">
         <v-col cols="12" md="4" sm="6" v-for="card in Team" :key="card.title">
           <v-card elevation="0" class="team-card mb-7">
             <div class="social-overlay overflow-hidden rounded-md">
@@ -64,6 +64,19 @@ function viewMore(item: any) {
         </v-col>
       </v-row>
     </v-container>
+    <div class="container">
+      <div v-for="card in Team" :key="card.title" class="box">
+        <div class="imgBox">
+          <img :src="card.img" alt="" />
+        </div>
+        <div @click="viewMore(card)" class="content cursor-pointer d-flex">
+          <h2>
+            {{ card.title }} <br />
+            <span>{{ card.subtitle }}</span> <br />
+          </h2>
+        </div>
+      </div>
+    </div>
     <v-dialog v-model="dialog" width="auto">
       <v-card max-width="800" :title="`Biography`">
         <template v-slot:text>
@@ -71,25 +84,31 @@ function viewMore(item: any) {
             <div>
               <v-img
                 :src="single?.img"
-                class="align-end p-md-4 rounded-md "
+                class="align-end p-md-4 rounded-md"
                 height="230px"
                 width="200px"
               ></v-img>
             </div>
             <div class="ml-md-8">
-                <div class="text-h3">{{ single?.title }}</div>
-                <div class="text-h5 text-primary">{{ single?.subtitle }}</div>
-                <div class="text-base mt-md-4">{{ single?.desc }}</div>
-                <div class="d-flex  mt-md-4">
-                    <div class="px-md-4 text-primary" v-for="social in single?.socialicon" :key="social.icon">
-                    <a :href="social.url">
-                      <i :class="social.icon" class="text-primary h-md-12 w-md-12"></i>
-                    </a>
-                  </div>
+              <div class="text-h3">{{ single?.title }}</div>
+              <div class="text-h5 text-primary">{{ single?.subtitle }}</div>
+              <div class="text-base mt-md-4">{{ single?.desc }}</div>
+              <div class="d-flex mt-md-4">
+                <div
+                  class="px-md-4 text-primary"
+                  v-for="social in single?.socialicon"
+                  :key="social.icon"
+                >
+                  <a :href="social.url">
+                    <i
+                      :class="social.icon"
+                      class="text-primary h-md-12 w-md-12"
+                    ></i>
+                  </a>
                 </div>
+              </div>
             </div>
           </div>
- 
         </template>
         <template v-slot:actions>
           <v-btn
@@ -105,3 +124,93 @@ function viewMore(item: any) {
     </v-dialog>
   </div>
 </template>
+<style lang="css">
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  
+}
+
+.container .box {
+  position: relative;
+  width: 30rem;
+  height: 30rem;
+  margin-top: 4rem;
+  margin-right: 1rem;
+  margin-left: 1rem;
+}
+
+.container .box:hover .imgBox {
+  transform: translate(-3.5rem, -3.5rem);
+}
+
+.container .box:hover .content {
+  transform: translate(3.5rem, 3.5rem);
+}
+
+.imgBox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80%;
+  height: 100%;
+  z-index: 2;
+  transition: all 0.5s ease-in-out;
+  background-color: rgba(0, 0, 0, 0.9);
+  border-radius: 10px;
+}
+
+.imgBox img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  resize: both;
+  border-radius: 10px;
+}
+
+.content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80%;
+  height: 100%;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+  border: 2px solid #4f000b;
+  border-radius: 10px;
+  z-index: 1;
+  align-items: flex-end;
+  text-align: center;
+  transition: 0.5s ease-in-out;
+}
+
+.content h2 {
+  display: block;
+  font-size: 1.5rem;
+  color: #111;
+  font-weight: 500;
+  line-height: 2rem;
+  letter-spacing: 1px;
+}
+
+.content span {
+  color: #4f000b;
+  font-size: 0.9rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+
+@media (max-width: 600px) {
+  .container .box:hover .content {
+    transform: translate(0, 3.5rem);
+  }
+  .container .box:hover .imgBox {
+    transform: translate(0, -3.5rem);
+  }
+}
+</style>

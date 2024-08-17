@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { Portfolio } from "@/_mockApis/custom-components/index";
 const date = new Date();
 </script>
 <template>

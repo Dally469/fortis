@@ -37,9 +37,9 @@ useSeoMeta({
   <!-- <Services /> -->
   <BuildAmazing />
 
-  <BuildFeature />
+  <!-- <BuildFeature /> -->
   <Team />
-  <Contact />
+  <!-- <Contact /> -->
 
   <!-- <Testimonials /> -->
 

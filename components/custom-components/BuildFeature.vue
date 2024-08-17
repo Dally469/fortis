@@ -43,12 +43,30 @@ const getColor = (item: BuildFeatures) => {
           </div>
         </v-col>
       </v-row>
-      
 
-      <v-row class="my-md-12 py-md-8 my-sm-4 rounded-md  ">
+      <v-row class="my-md-12 py-md-8 my-sm-4 rounded-md">
         <v-col cols="12" sm="12">
           <v-row>
+            <div 
+              v-for="item in BuildFeaturesData"
+              :key="item.title"
+              class="card4 cursor-pointer"
+             @click="viewMore(item)"
+            >
+            
+              <VIcon :icon="item.icon" />
+              <h3 class="pb-3">{{item.title}}</h3>
+              <p class="small">
+                {{ item.desc.substring(0, 100) + "..." }}
+              <span class="text-primary"> Read more </span>
+              </p>
+              <div class="dimmer"></div>
+              <div class="go-corner" href="#">
+                <div class="go-arrow">→</div>
+              </div>
+            </div>
             <v-col
+              v-if="false"
               v-for="card in BuildFeaturesData"
               :key="card.title"
               :cols="card.flex"
@@ -106,14 +124,13 @@ const getColor = (item: BuildFeatures) => {
     <v-dialog v-model="dialog" width="auto">
       <v-card
         max-width="700"
-        :prepend-icon="single?.img"
+        :prepend-icon="single?.icon"
         :title="single?.title"
       >
         <template v-slot:text>
           <v-img
             :src="single?.img"
             class="align-end rounded-md"
-            
             height="260px"
             contain
           ></v-img>

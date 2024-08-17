@@ -16,11 +16,12 @@ type Connect = {
 };
 //Build Features
 type BuildFeatures = {
+  icon: TablerIconComponent;
   img: string;
   title: string;
   desc: string;
   flex: number;
-  lawyer?: Lawyer[] ;
+  lawyer?: Lawyer[];
 };
 
 type Lawyer = {

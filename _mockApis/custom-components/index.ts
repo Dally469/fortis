@@ -19,6 +19,11 @@ import {
   AssemblyIcon,
   LayersIntersect2Icon,
   TriangleSquareCircleIcon,
+  BuildingWarehouseIcon,
+  BuildingSkyscraperIcon,
+  BuildingEstateIcon,
+  BuildingStoreIcon,
+  UsersIcon,
 } from "vue-tabler-icons";
 
 //Services
@@ -45,7 +50,7 @@ const ConnectData: Connect[] = [
     icon: StarIcon,
     title: "Partner with us",
     desc: "Become more than a partner; become a catalyst for change. Together, we can mold a future where access to justice is not a privilege, but a universal right.",
-    photo: "/images/partners.jpg",
+    photo: "/images/Partners.jpg",
     url: "/connect/partners",
     btnName: "Become a  Partner"
   },
@@ -69,7 +74,7 @@ const ConnectData: Connect[] = [
     icon: StarIcon,
     title: "Book Consultation",
     desc: "We welcome and value contributions from scholars, professionals, and passionate individuals who seek to shed light on challenges in Africa.",
-    photo: "/images/consultation.jpg",
+    photo: "/images/Consultation.jpg",
     url: "/connect/consultation",
     btnName: "consultation"
   },
@@ -87,6 +92,7 @@ import img8 from "/images/gifs/labour.gif";
 
 const BuildFeaturesData: BuildFeatures[] = [
   {
+    icon: AssemblyIcon,
     img: imgg1,
     title: "CORPORATE GOVERNANCE",
     desc: "We are committed to assisting its clients especially companies in the design and evaluation of effective compliance mechanisms, establishment of internal policies, incorporating respect for the law, risk management and alignment with strategic objectives.",
@@ -94,6 +100,7 @@ const BuildFeaturesData: BuildFeatures[] = [
     lawyer: [{ name: "Mr NKUBITO Aimable", phone: "+250788360994" }],
   },
   {
+     icon: BuildingWarehouseIcon  ,
     img: img6,
     title: "INTELLECTUAL PROPERTY ",
     desc: "We are actively involved in the registration, utilization and enforcement of IPR including copyright, trademarks and patents areas. \n\nOur firm offers a wide range of services to ensure that our top priority of safeguarding clients’ most valuable assets such as original ideas, designs, discoveries and inventions and creative work is met.  \n\nAs they say, intellectual property is a business asset. It helps set apart your business versus your competitors. It provides a stream of revenue which you deserve to be compensated for since it is a client’s creation. We stood up to defend our client’s rights.",
@@ -104,6 +111,7 @@ const BuildFeaturesData: BuildFeatures[] = [
     ],
   },
   {
+     icon: UsersIcon,
     img: imgg2,
     title: "FAMILY LAW",
     desc: "Family law is a broad subject that touches on many areas of the law. \n\nWe offer a wide range of services in relation to domestic relations, such marriage relationship, Parent-child relationship, succession, rights and duties of the parties, enforcement of orders, modification of orders, and removal of minority status. ",
@@ -111,6 +119,7 @@ const BuildFeaturesData: BuildFeatures[] = [
     lawyer: [{ name: "Mr NKUBITO Aimable", phone: "+250788360994" }],
   },
   {
+     icon: BuildingStoreIcon,
     img: imgg2,
     title: "BUSINESS LAW",
     desc: "Over the past years, we have built a team of right-brained business lawyers and business consultants with business minds, who understand the business world. \n\nWe make transactions; we assist clients to form companies, merge and take apart, create joint ventures, draft and review contracts. ",
@@ -118,6 +127,7 @@ const BuildFeaturesData: BuildFeatures[] = [
     lawyer: [{ name: "Mr NKUBITO Aimable", phone: "+250788360994" }],
   },
   {
+     icon: AssemblyIcon,
     img: imgg2,
     title: "DISPUTE RESOLUTION",
     desc: "ADR Methods have gained substantial traction over the past years, the ultimate goal is to achieve a lasting resolution to the dispute. \n\nWe help clients engage in ADR in order to keep their reputation or trade secrets intact while they work towards a resolution. ",
@@ -126,6 +136,7 @@ const BuildFeaturesData: BuildFeatures[] = [
   },
 
   {
+     icon: BuildingEstateIcon,
     img: img7,
     title: "REAL ESTATE LAW",
     desc: "Do not let petty legal issues get in the way of your buying, selling, or refinancing your home. Our experts will make the legal process as easy and painless as possible. \n\nOver the past few years, our attorneys have developed a successful and growing real estate practice. We assist buyers and sellers in the traditional purchase and sale of residential and commercial real estate. \n\nWe pride ourself on our professional approach to real estate transactions and understanding of their clients’ needs..",
@@ -133,6 +144,7 @@ const BuildFeaturesData: BuildFeatures[] = [
     lawyer: [{ name: "Mr NKUBITO Aimable", phone: "+250788360994" }],
   },
   {
+     icon: BuildingSkyscraperIcon,
     img: imgg2,
     title: "CORPORATE COMPLIANCE",
     desc: "We are committed to assisting its clients especially companies in the design and evaluation of effective compliance mechanisms, establishment of internal policies, incorporating respect for the law, risk management and alignment with strategic objectives.",
@@ -140,6 +152,7 @@ const BuildFeaturesData: BuildFeatures[] = [
     lawyer: [{ name: "Mr NKUBITO Aimable", phone: "+250788360994" }],
   },
   {
+     icon: AssemblyIcon,
     img: img8,
     title: "LABOR LAW ",
     desc: "Over the past years, our firm has developed this practice of mediating many aspects of the relationship between trade unions, employers and employees. ",
@@ -282,40 +295,11 @@ const Team: TeamSection[] = [
   },
 ];
 
-//Testimonial
 
-import profile1 from "/images/blog/cyrus.jpg";
-import profile2 from "/images/blog/kriss.jpg";
-import profile3 from "/images/blog/sara.jpg";
-
-const TestimonialsData: Testimonials[] = [
-  {
-    img: profile1,
-    testimonial:
-      "Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras venene veliel vestibulum.",
-    name: "MICHELLE ANDERSON",
-    rating: 5,
-  },
-  {
-    img: profile2,
-    testimonial:
-      "Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras venene veliel vestibulum.",
-    name: "MARK MESTY",
-    rating: 4,
-  },
-  {
-    img: profile3,
-    testimonial:
-      "Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras venene veliel vestibulum.",
-    name: "LIMPSY ADAM",
-    rating: 5,
-  },
-];
 
 export {
   ServicesData,
   BuildFeaturesData,
   ConnectData,
   Team,
-  TestimonialsData,
 };

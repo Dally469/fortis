@@ -26,10 +26,10 @@ function handleScroll() {
 <template>
   <div class="header white-header mt-n95">
     <!----sidebar menu drawer start----->
-    <v-navigation-drawer color="white" class="drawer px-3" v-model="drawer" temporary >
+    <v-navigation-drawer  class="drawer px-3  bg-surface" v-model="drawer" temporary >
       <perfect-scrollbar class="scrollnavbar">
         <!-- <MobileNavigation /> -->
-        <v-list class="menu text-capitalizew-100">
+        <v-list class="menu text-capitalizew-100  ">
                 <!---Menu Loop -->
                 <template v-for="(item, i) in sidebarItem">
                     <!---Item Sub Header -->
@@ -64,7 +64,7 @@ function handleScroll() {
           <div class="d-md-flex d-none">
             <v-btn to="/connect" color="primary" class="ms-3 sticky-border d-md-flex d-none" size="large" variant="flat">  Connect with Us</v-btn>
           </div>
-          <Menu2Icon class="d-md-none d-flex drawer-icon  no-effect ml-auto mr-0" @click.stop="drawer = !drawer"
+          <Menu2Icon class="d-md-none d-flex drawer-icon text-white  no-effect ml-auto mr-0" @click.stop="drawer = !drawer"
             size="30"></Menu2Icon>
         </v-toolbar>
       </v-container>

@@ -13,8 +13,10 @@
           data-aos-duration="1000"
         >
           <div class="d-flex align-center text-white mb-6">
-            <div class="text-h4 text-white font-weight-bold">
-              Area Of Practice That Can Help You To Win.
+            <div class="text-h4 pl-md-8 pr-md-14 text-white font-weight-bold">
+              Our success is rooted in our core values. These values form the
+              foundational principles that define what we stand for as a law
+              firm and as individuals.
             </div>
           </div>
           <div class="text-lightmuted mb-6">
@@ -108,7 +110,7 @@ p {
 .container p span.typed-text {
   font-weight: bold;
   color: white;
-  font-size: 5rem;
+  font-size: 4rem;
   text-shadow: 1px 1px 1px rgb(110, 14, 14);
 }
 .container p span.cursor {

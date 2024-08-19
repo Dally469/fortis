@@ -12,30 +12,22 @@
           data-aos-delay="200"
           data-aos-duration="1000"
         >
-          <div class="d-flex align-center text-white mb-6">
-            <div class="text-h4 pl-md-8 pr-md-14 text-white font-weight-bold">
-              Our success is rooted in our core values. These values form the
-              foundational principles that define what we stand for as a law
-              firm and as individuals.
-            </div>
-          </div>
+          
           <div class="text-lightmuted mb-6">
-            <div class="container">
-              <p class="d-flex">
+            <div class="container   flex justify-start">
+              <p class="flex">
                 I <span ref="typedTextSpan" class="typed-text"></span
                 ><span ref="cursorSpan" class="cursor">&nbsp;</span>
               </p>
             </div>
           </div>
         </v-col>
-        <v-row v-if="false">
-          <v-col cols="12" md="6" sm="6" class="px-xs-0">
-            <div
-              class="mt-md-6 col-span-1 text-h5 pr-md-2 py-md-2 rounded-lg text-secondary w-1/2"
-            >
-              Our mission is to provide access to quality and equitable justice
-              to vulnerable groups and build the knowledge and capacity of
-              justice actors.
+        <v-row v-if="true">
+          <v-col cols="12" md="8" sm="8" class="px-xs-0">
+            <div class="text-h4 pl-md-8 pr-md-14 text-white font-weight-bold">
+              Our success is rooted in our core values. These values form the
+              foundational principles that define what we stand for as a law
+              firm and as individuals.
             </div>
           </v-col>
         </v-row>
